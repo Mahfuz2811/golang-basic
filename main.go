@@ -3,38 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	/*x := 0
-	for x < 5 {
-		fmt.Println("The value of x is:", x)
-		x++
-	}*/
+	age := 45
 
-	/*for i := 0; i < 5; i++ {
-		fmt.Println("The value of i is:", i)
-	}*/
+	fmt.Println(age <= 50)
+	fmt.Println(age >= 50)
+	fmt.Println(age == 45)
+	fmt.Println(age != 50)
 
-	/*names := []string{"bangladesh", "india", "pakistan", "nepal", "bhutan"}
+	countries := []string{"bangladesh", "india", "pakistan", "maldivs", "bhutan"}
 
-	for i := 0; i < len(names); i++ {
-		fmt.Println(names[i])
-	}*/
+	for index, value := range countries {
+		if index == 1 {
+			fmt.Println("continuing at pos", index)
+			continue
+		}
 
-	// for in
-	/*names := []string{"bangladesh", "india", "pakistan", "nepal", "bhutan"}
+		if index > 3 {
+			fmt.Println("breaking at pos", index)
+			break
+		}
 
-	for index, value := range names {
-		fmt.Printf("The value at index %v is %v \n", index, value)
-	}*/
-
-	// if we want only value then
-	names := []string{"bangladesh", "india", "pakistan", "nepal", "bhutan"}
-
-	for _, value := range names {
-		fmt.Printf("The value is %v \n", value)
+		fmt.Printf("the value at pos %v is %v \n", index, value)
 	}
-
-	for index, _ := range names {
-		fmt.Printf("The index is %v \n", index)
-	}
-
 }
