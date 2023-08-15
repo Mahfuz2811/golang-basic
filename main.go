@@ -1,90 +1,40 @@
 package main
 
-import (
-	"fmt"
-	"sort"
-)
+import "fmt"
 
 func main() {
-	// variables
-	/*var nameOne string = "Mahfuz"
-	var nameTwo = "Shishir"
-	var nameThree string
+	/*x := 0
+	for x < 5 {
+		fmt.Println("The value of x is:", x)
+		x++
+	}*/
 
-	fmt.Println(nameOne, nameTwo, nameThree)
+	/*for i := 0; i < 5; i++ {
+		fmt.Println("The value of i is:", i)
+	}*/
 
-	nameOne = "Hello"
-	nameThree = "Go"
+	/*names := []string{"bangladesh", "india", "pakistan", "nepal", "bhutan"}
 
-	fmt.Println(nameOne, nameTwo, nameThree)
+	for i := 0; i < len(names); i++ {
+		fmt.Println(names[i])
+	}*/
 
-	nameFour := "Hello Go"
+	// for in
+	/*names := []string{"bangladesh", "india", "pakistan", "nepal", "bhutan"}
 
-	fmt.Println(nameFour) */
+	for index, value := range names {
+		fmt.Printf("The value at index %v is %v \n", index, value)
+	}*/
 
-	// formated string
-	/*var ageOne int = 10
-	var ageTwo = 20
-	ageThree := 30
+	// if we want only value then
+	names := []string{"bangladesh", "india", "pakistan", "nepal", "bhutan"}
 
-	fmt.Println(ageOne, ageTwo, ageThree)
+	for _, value := range names {
+		fmt.Printf("The value is %v \n", value)
+	}
 
-	var numerOne int8 = 12
-	var name string = "Mahfuz"
+	for index, _ := range names {
+		fmt.Printf("The index is %v \n", index)
+	}
 
-	fmt.Printf("My name is %v and my age is %v", name, numerOne)
-	fmt.Printf("\n")
-
-	var str = fmt.Sprintf("My name is %v and my age is %v", name, numerOne)
-
-	fmt.Println("The saved string is:", str)*/
-
-	// arrays
-	/*var ages [3]int = [3]int{10, 20, 30}
-	fmt.Println(ages, len(ages))
-	ages[1] = 25
-	fmt.Println(ages, len(ages))
-
-	var names = [3]string{"mahfuz", "shishir", "farazi"}
-	fmt.Println(names, len(names))
-
-	numbers := [4]int{1, 2, 3, 4}
-	fmt.Println(numbers, len(numbers))*/
-
-	// slices (use arrays under the hood)
-	/*var scores = []int{10, 20, 30}
-	fmt.Println(scores, len(scores))
-	scores[2] = 40;
-	fmt.Println(scores, len(scores))
-
-	scores = append(scores, 50, 60)
-	fmt.Println(scores, len(scores))*/
-
-	// slice ranges
-	/*var names = [5]string{"mahfuz", "shishir", "farazi", "zinat", "anni"}
-	fmt.Println(names, len(names))
-
-	rangeOne := names[1:3]
-	rangeTwo := names[2:]
-	rangeThree := names[:3]
-	fmt.Println(rangeOne, rangeTwo, rangeThree)*/
-
-	/*var gretting string = "hello there friends!"
-
-	fmt.Println(strings.Contains(gretting, "hello"))
-	fmt.Println(strings.ReplaceAll(gretting, "hello", "hi"))
-	fmt.Println(strings.ToUpper(gretting))
-	fmt.Println(strings.Index(gretting, "th"))
-
-	var counts = []string{}
-	counts = strings.Split(gretting, " ")
-	fmt.Println(counts, len(counts))*/
-
-	ages := []int{23, 45, 12, 55, 21, 65, 34, 33}
-	sort.Ints(ages)
-
-	fmt.Println(ages)
-
-	index := sort.SearchInts(ages, 2443)
-	fmt.Println(index)
 }
