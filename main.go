@@ -1,28 +1,34 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+func getInitials(n string) (string, string) {
+	s := strings.ToUpper(n)
+	names := strings.Split(s, " ")
+
+	var initials []string
+
+	for _, v := range names {
+		initials = append(initials, v[:1])
+	}
+
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+
+	return initials[0], "_"
+
+}
 
 func main() {
-	age := 45
+	fn1, sn1 := getInitials("mahfuz shishir")
+	fn2, sn2 := getInitials("mahfuz farazi")
+	fn3, sn3 := getInitials("mahfuz")
 
-	fmt.Println(age <= 50)
-	fmt.Println(age >= 50)
-	fmt.Println(age == 45)
-	fmt.Println(age != 50)
-
-	countries := []string{"bangladesh", "india", "pakistan", "maldivs", "bhutan"}
-
-	for index, value := range countries {
-		if index == 1 {
-			fmt.Println("continuing at pos", index)
-			continue
-		}
-
-		if index > 3 {
-			fmt.Println("breaking at pos", index)
-			break
-		}
-
-		fmt.Printf("the value at pos %v is %v \n", index, value)
-	}
+	fmt.Println(fn1, sn1)
+	fmt.Println(fn2, sn2)
+	fmt.Println(fn3, sn3)
 }
